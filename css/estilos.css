@@ -2,7 +2,9 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
+#header{
+	background-image:url (C:/xampp/htdocs/jaimehr/ElProyecto/imagenes/FaradayAltoNivel.jpg);
+}
 
 .form-signin {
   max-width: 330px;

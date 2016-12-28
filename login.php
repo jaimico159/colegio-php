@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/estilos.css">
-	<title>Proyecto academias</title>
+	<title>Estudiante</title>
 </head>
 <body background="imagenes/LoginEstudio2.jpg" style="backgroung-attachment: fixed">
 <div class="container">

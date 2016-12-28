@@ -11,16 +11,16 @@
   
 </head>
 
-<body class="container">
+<body class="container" background="imagenes/solidblue.jpg" style="backgroung-attachment: fixed">
 
-<div class="btn-group">
+<nav class="nav nav-pills">
   <button type="button" class="btn btn-default" onclick="window.location.href='QuienesSomos.html'">Quienes Somos</button>
   <button type="button" class="btn btn-default">Programas educativos</button>
-  <button type="button" class="btn btn-default">Notas</button>
-  <button type="button" class="btn btn-default">Profesores</button>
+  <button type="button" class="btn btn-default" onclick="window.location.href='login.php'">Notas</button>
+  <button type="button" class="btn btn-default" onclick="window.location.href='Profesores.html'">Profesores</button>
   <button type="button" class="btn btn-default">Actividades Academicas</button>
   
-</div>
+</nav>
 
 <?php 
 session_start();
