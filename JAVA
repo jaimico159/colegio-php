@@ -1,0 +1,68 @@
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		sc.close();
+		int[][] bones = new int[100][103];
+		for(int i=0;i<100;i++){
+			for(int k=0;k<100;k++) bones[i][k]=1;
+		}
+	/*	String a = "32156546514321232465465132184981981891916516548979879879876546514321654987987684654654984846546549847984651465489489498489"
+				+ "6546548948946546546548464868654654654684684646546546546848654654654654684864687987987498465465465465465468464865468468486468"
+				+ "6546548964984684984894894894984";
+		ArrayList<String> cad = divide(a);
+		for(String b:cad) System.out.println(b);
+		System.err.println(1000*Math.log(10));
+	*/	
+		System.out.println(sqrt("5329"));
+		
+		
+	}
+	
+	public static int sqrt(String number){
+		if(number.length()%2==0){
+			int rest=0;
+			int sqrt=0;
+			String dif="";
+			for(int i=0;i<=number.length()-2;i+=2){
+				int a=Integer.parseInt(number.substring(i, i+2));
+				dif=dif+a;
+				int dec=(int)Math.pow(10, number.length()-2-i);
+				int f=(int) ((int)nearer(Integer.parseInt(dif))*Math.sqrt(dec));
+				
+				System.out.println(f);
+				if(i==0){
+					rest=rest+f;
+					dif=(Integer.parseInt(dif)-f*f)+"";
+				}
+				else{
+					int doub = 2*f;
+					int quo = Integer.parseInt(dif)/doub;
+					int nuevo=doub*quo;
+					rest=rest+quo;
+					dif=(Integer.parseInt(dif)-nuevo)+"";
+				}
+			}
+			return rest;
+		}
+		return -1;
+		
+	}
+	
+	public static int nearer(int n){
+		return (int)Math.floor(Math.sqrt(n));
+	}
+	
+	public static ArrayList<String> divide(String cadena){
+		ArrayList<String> pares = new ArrayList<String>();
+		for(int i=cadena.length()-1;i>0;i-=2){
+			pares.add(cadena.substring(i-1, i+1));
+		}
+		if(cadena.length()%2!=0)
+		pares.add(cadena.charAt(0)+"");
+		return pares;
+	}
+}
